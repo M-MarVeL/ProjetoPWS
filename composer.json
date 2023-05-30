@@ -1,0 +1,9 @@
+{
+    "name": "ruben/projeto-pws",
+    "autoload": {
+        "psr-4": {
+            "Ruben\\ProjetoPws\\": "src/"
+        }
+    },
+    "require": {}
+}
