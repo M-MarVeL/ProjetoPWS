@@ -1,9 +1,9 @@
 <?php
 
-Class Auth(){
-  
+Class Auth {
+
   function __construct(){
-    if(session_status != 2) { session_start() };
+    if(session_status != 2) { session_start(); };
   }
 
 
@@ -12,9 +12,7 @@ Class Auth(){
     $user = User::find_by_username_and_passoword($username, $password);
 
     if(!is_null($user)){
-      $_SESSION['auth']['username'] = $user->username;
-      $_SESSION['auth']['userid'] = $user->id;
-      $_SESSION['auth']['role'] = $user->role;
+      setSession($user);
       return true;      
     }
 
@@ -22,14 +20,10 @@ Class Auth(){
 
   }
 
-  public function checkRole(){
-
-  }
-
-  public function index($username, $password){
-    if(authCheck($username, $password)){
-      $this->redirect('');
-    }
+  private function setSession($user){
+      $_SESSION['auth']['username'] = $user->username;
+      $_SESSION['auth']['userid'] = $user->id;
+      $_SESSION['auth']['role'] = $user->role;
   }
 
   function isLoggedin(){

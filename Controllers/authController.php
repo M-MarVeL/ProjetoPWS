@@ -1,7 +1,8 @@
 <?php
-require_once './Models/Auth';
-require_once 'Controllers/Controller'
+require_once './Models/Auth.php';
+require_once './Controllers/Controller.php';
 class authController extends Controller { 
+  
   public function index(){
     $this->renderView('auth', 'index');
   }
