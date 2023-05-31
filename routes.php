@@ -1,13 +1,10 @@
 <?php
+require_once 'controllers/authController';
+require_once 'controllers/FoController';
 
-#require_onde dos controllers
-
- //
- //    'defaultRoute' => ['GET', 'HomeController', 'index'],
- //    'auth' => [
- //        'index' => ['GET','AuthController','index'],
- //        'login' => ['POST','AuthController','login'],
- //        'logout'=> ['GET','AuthController','logout'],
- //    ],
-
-
+  'defaultRoute' => ['GET', 'FoController', 'index'],
+    'auth' => [
+      'index' => ['GET', 'AuthController', 'index'],
+      'login' => ['POST', 'AuthController', 'login'],
+      'logout' => ['GET', 'AuthController', 'logout'],
+    ],

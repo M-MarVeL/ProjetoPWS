@@ -2,51 +2,71 @@
 
 Class Auth(){
   
-function __construct(){
-  session_start();
-}
-
-
-function authCheck(){
-
-// $user = User::
-  if(){
-    $_SESSION['username'] = 'username';
-    return true;
-  }
-  
-  return false;
-
-}
-
-function checkRole(){
-
+  function __construct(){
+    if(session_status != 2) { session_start() };
   }
 
-function index(){
-  if(authCheck($username, $password)){
-    redirect('');
+
+  public function authCheck($username, $password){
+
+    $user = User::find_by_username_and_passoword($username, $password);
+
+    if(!is_null($user)){
+      $_SESSION['auth']['username'] = $user->username;
+      $_SESSION['auth']['userid'] = $user->id;
+      $_SESSION['auth']['role'] = $user->role;
+      return true;      
+    }
+
+    return false;
+
   }
-}
 
-function isLoggedin(){
-  if($_SESSION['username']){
-    return true;
+  public function checkRole(){
+
   }
 
-  return false;
+  public function index($username, $password){
+    if(authCheck($username, $password)){
+      $this->redirect('');
+    }
+  }
 
-}
+  function isLoggedin(){
+    return isset($_SESSION['auth']);
 
-function Logout(){
-  session_unset($_SESSION['username']);
-}
+  }
+
+  public function Logout(){
+    // session_unset($_SESSION['username']);
+    session_destroy();
+  }
+
+  public function getUsername(){
+    if($this->isLoggedin()) { return $_SESSION['auth']['username']; }
+
+    return '';
+
+  }
 
 
-static function redirect($url){
-  header('Location: ' . $url);
-  exit();
-}
+  public function getUserId(){
+    if($this->isLoggedin()) { return $_SESSION['auth']['userid']; }
 
+    return '';
+  } 
+
+  public function getUserRole(){
+    if($this->isLoggedin()) { return $_SESSION['auth']['role']; }
+
+    return '';
+  }
+
+  public function isLoggedInAs($roles=[]){
+    if($this->isLoggedin()){ 
+      $userRole = $this->getUserRole();
+      return in_array($userRole, $roles);
+    }
+  }
 }
 
