@@ -6,9 +6,9 @@ require_once './Controllers/FoController.php';
 return [
    'defaultRoute' => ['GET', 'FoController', 'index'],
     'auth' => [
-      'index' => ['GET', 'AuthController', 'index'],
-      'login' => ['POST', 'AuthController', 'login'],
-      'logout' => ['GET', 'AuthController', 'logout'],
+      'index' => ['GET', 'authController', 'index'],
+      'login' => ['POST', 'authController', 'login'],
+      'logout' => ['GET', 'authController', 'logout'],
     ],
     'fo' => [
       'index' => ['GET', 'FoController', 'index'],

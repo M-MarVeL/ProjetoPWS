@@ -14,8 +14,8 @@ class Controller{
 
     protected function renderView($controllerPrefix, $viewName, $data = [], $layout = 'default') {
         extract($data);
-        $viewPath = 'views/' . $controllerPrefix . '/' . $viewName . '.php';
-        $layoutPath = 'views/layout/' . $layout . '.php';
+        $viewPath = 'Views/' . $controllerPrefix . '/' . $viewName . '.php';
+        $layoutPath = 'Views/Layouts/' . $layout . '.php';
         require_once($layoutPath);
     }
 
