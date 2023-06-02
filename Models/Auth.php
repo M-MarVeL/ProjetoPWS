@@ -3,7 +3,7 @@
 Class Auth {
 
   function __construct(){
-    if(session_status != 2) { session_start(); };
+    if(session_status() != 2) { session_start(); };
   }
 
 
@@ -32,7 +32,7 @@ Class Auth {
   }
 
   public function Logout(){
-    // session_unset($_SESSION['username']);
+    // session_unset($_SESSION['auth']);
     session_destroy();
   }
 

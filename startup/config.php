@@ -11,5 +11,4 @@ ActiveRecord\Config::initialize(function($config){
         'development' => 'mysql://root@localhost/empresa',
     )
   );
-
 });

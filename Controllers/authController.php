@@ -4,7 +4,7 @@ require_once './Controllers/Controller.php';
 class authController extends Controller { 
   
   public function index(){
-    $this->renderView('auth', 'index');
+    $this->renderView('auth', 'index', [], 'loginlayout');
   }
 
   public function login(){
@@ -13,7 +13,7 @@ class authController extends Controller {
 
     $auth = new Auth();
 
-    if($auth->checkAuth($username, $passowrd)){
+    if($auth->authCheck($username, $password)){
       $this->redirectToRoute('plano', 'index');
     }
 
