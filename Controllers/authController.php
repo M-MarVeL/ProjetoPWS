@@ -10,11 +10,13 @@ class authController extends Controller {
   public function login(){
     $username = $this->getHTTPPOSTParam('username');
     $password = $this->getHTTPPOSTParam('password');
+      
+    
 
     $auth = new Auth();
 
     if($auth->authCheck($username, $password)){
-      $this->redirectToRoute('plano', 'index');
+      $this->redirectToRoute('bo', 'index');
     }
 
     $this->redirectToRoute('auth', 'index');

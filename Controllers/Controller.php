@@ -1,6 +1,6 @@
 <?php
 require_once './models/Auth.php';
-class Controller{
+class Controller {
     protected function redirectToRoute($controllerPrefix, $action, $params = []) {
         // Build the redirect URL
         $url = 'index.php?c=' . urlencode($controllerPrefix) . '&a=' .

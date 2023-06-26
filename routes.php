@@ -1,7 +1,7 @@
 <?php
 require_once './Controllers/authController.php';
 require_once './Controllers/FoController.php';
-
+require_once './Controllers/BoController.php';
 
 return [
    'defaultRoute' => ['GET', 'FoController', 'index'],
@@ -12,6 +12,9 @@ return [
     ],
     'fo' => [
       'index' => ['GET', 'FoController', 'index'],
-    ]
+    ],
+    'bo' => [
+      'index' => ['GET', 'BoController', 'index'],
+    ],
 ]
 ?>

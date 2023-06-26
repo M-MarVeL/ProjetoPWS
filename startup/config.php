@@ -1,12 +1,12 @@
 <?php
 require './vendor/autoload.php';
 define('APP_NAME', 'Projeto PWS');
-define('INVALID_ACESS_ROUTE', 'index.php?c=home&a=index');
+define('INVALID_ACESS_ROUTE', 'index.php?c=fo&a=index');
 
-ActiveRecord\Config::initialize(function($config){
+ActiveRecord\Config::initialize(function($cfg){
 
-  $config->set_model_directory('./Models');
-  $config->set_connections(
+  $cfg->set_model_directory('./Models');
+  $cfg->set_connections(
     array(
         'development' => 'mysql://root@localhost/empresa',
     )

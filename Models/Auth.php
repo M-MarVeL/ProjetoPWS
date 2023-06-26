@@ -1,6 +1,7 @@
 <?php
+require_once 'User.php';
 
-Class Auth {
+class Auth {
 
   function __construct(){
     if(session_status() != 2) { session_start(); };
@@ -9,7 +10,7 @@ Class Auth {
 
   public function authCheck($username, $password){
 
-    $user = User::find_by_username_and_passoword($username, $password);
+    $user = User::find_by_username_and_password($username, $password);
 
     if(!is_null($user)){
       setSession($user);
