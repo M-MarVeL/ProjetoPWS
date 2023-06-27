@@ -11,8 +11,6 @@ class authController extends Controller {
     $username = $this->getHTTPPOSTParam('username');
     $password = $this->getHTTPPOSTParam('password');
       
-    
-
     $auth = new Auth();
 
     if($auth->authCheck($username, $password)){
@@ -21,7 +19,7 @@ class authController extends Controller {
 
     $this->redirectToRoute('auth', 'index');
 
-  }
+  } 
 
   public function logout(){
     $plano = new Auth();
