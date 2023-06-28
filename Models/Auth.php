@@ -13,7 +13,7 @@ class Auth {
     $user = User::find_by_username_and_password($username, $password);
 
     if(!is_null($user)){
-      setSession($user);
+      $this->setSession($user);
       return true;      
     }
 
@@ -29,7 +29,6 @@ class Auth {
 
   function isLoggedin(){
     return isset($_SESSION['auth']);
-
   }
 
   public function Logout(){
@@ -43,7 +42,6 @@ class Auth {
     return '';
 
   }
-
 
   public function getUserId(){
     if($this->isLoggedin()) { return $_SESSION['auth']['userid']; }

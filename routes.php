@@ -16,5 +16,29 @@ return [
     'bo' => [
       'index' => ['GET', 'BoController', 'index'],
     ],
+    'empresa' => [
+      'index' => ['GET', 'empresaController', 'index'],
+      'create' => ['GET', 'empresaController', 'create'],
+      'store' => ['POST', 'empresaController', 'store'],
+      'edit' => ['GET', 'empresaController', 'edit'],
+      'update' => ['POST', 'empresaController', 'update'],
+      'delete' => ['POST', 'empresaController', 'delete'],
+    ],
+    'servico' => [
+      'index' => ['GET', 'servicoController', 'index'],
+      'create' => ['GET', 'servicoController', 'create'],
+      'store' => ['POST', 'servicoController', 'store'],
+      'edit' => ['GET', 'servicoController', 'edit'],
+      'update' => ['POST', 'servicoController', 'update'],
+      'delete' => ['POST', 'servicoController', 'delete'],
+    ],
+    'iva' => [
+      'index' => ['GET', 'ivaController', 'index'],
+      'create' => ['GET', 'ivaController', 'create'],
+      'store' => ['POST', 'ivaController', 'store'],
+      'edit' => ['GET', 'ivaController', 'edit'],
+      'update' => ['POST', 'ivaController', 'update'],
+      'delete' => ['POST', 'ivaController', 'delete'],
+    ],
 ]
 ?>

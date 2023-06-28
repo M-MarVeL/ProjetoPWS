@@ -10,7 +10,7 @@
 
       <form action="index.php?c=auth&a=login" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" id="username" placeholder="Username">
+          <input type="text" class="form-control" name="username" id="username" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
