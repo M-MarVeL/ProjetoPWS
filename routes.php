@@ -32,7 +32,7 @@ return [
       'edit' => ['GET', 'servicoController', 'edit'],
       'update' => ['POST', 'servicoController', 'update'],
       'delete' => ['GET', 'servicoController', 'delete'],
-      'show' => ['POST', 'empresaController', 'show'],
+      'show' => ['POST', 'servicoController', 'show'],
     ],
     'iva' => [
       'index' => ['GET', 'ivaController', 'index'],
@@ -41,7 +41,7 @@ return [
       'edit' => ['GET', 'ivaController', 'edit'],
       'update' => ['POST', 'ivaController', 'update'],
       'delete' => ['GET', 'ivaController', 'delete'],
-      'show' => ['POST', 'empresaController', 'show'],
+      'show' => ['POST', 'ivaController', 'show'],
     ],
 ]
 ?>

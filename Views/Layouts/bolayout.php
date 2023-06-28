@@ -161,25 +161,25 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/tables/simple.html" class="nav-link">
+                                <a href="index.php?c=utilizadores&a=index" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Utilizadores</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/tables/data.html" class="nav-link">
+                                <a href="index.php?c=servico&a=index" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Serviços</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <a href="index.php?c=iva&a=index" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>IVA</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <a href="index.php?c=empresa&a=index" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Empresa</p>
                                 </a>
