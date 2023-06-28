@@ -15,7 +15,7 @@ class empresaController extends Controller {
   
     public function store(){
       $designcao = $this->getHTTPPOSTParam('designcao');
-      $endereco = $this->getHTTPPOSTParam('endereco');
+      $morada = $this->getHTTPPOSTParam('morada');
       $codigopostal = $this->getHTTPPOSTParam('codigopostal');
       $localidade = $this->getHTTPPOSTParam('localidade');
       $telefone = $this->getHTTPPOSTParam('telefone');

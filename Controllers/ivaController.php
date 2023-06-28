@@ -32,12 +32,13 @@ class ivaController extends Controller {
     public function update(){
       $id = $this->getHTTPPOSTParam('id');
   
-      $iva = new iva();
+      $iva = new Iva();
       $iva->load($id);
   
-      $iva->setIva($this->getHTTPPOSTParam('iva'));
-      $iva->setFecha($this->getHTTPPOSTParam('fecha'));
-  
+      $iva->setpercentagem($this->getHTTPPOSTParam('percentagem'));
+      $iva->setemvigor($this->getHTTPPOSTParam('fecha'));
+      $iva->setdescricao($this->getHTTPPOSTParam('descricao')); 
+
       $iva->save();
   
       $this->redirectToRoute('iva', 'index');
