@@ -1,10 +1,16 @@
 {
-    "name": "ruben/projeto-pws",
+    "name": "admin/projeto-pws",
     "autoload": {
         "psr-4": {
-            "Ruben\\ProjetoPws\\": "src/"
+            "Admin\\ProjetoPws\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "Rúben Gomes",
+            "email": "ruben.gomes16@hotmail.com"
+        }
+    ],
     "require": {
         "php-activerecord/php-activerecord": "^1.2"
     }

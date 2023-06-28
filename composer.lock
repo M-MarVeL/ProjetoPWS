@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef257c25720d940896df3de445486454",
+    "content-hash": "5933b4b6a0c22e2f1f7e782e27af0ad4",
     "packages": [
         {
             "name": "php-activerecord/php-activerecord",

@@ -22,7 +22,8 @@ return [
       'store' => ['POST', 'empresaController', 'store'],
       'edit' => ['GET', 'empresaController', 'edit'],
       'update' => ['POST', 'empresaController', 'update'],
-      'delete' => ['POST', 'empresaController', 'delete'],
+      'delete' => ['GET', 'empresaController', 'delete'],
+      'show' => ['POST', 'empresaController', 'show'],
     ],
     'servico' => [
       'index' => ['GET', 'servicoController', 'index'],
@@ -30,7 +31,8 @@ return [
       'store' => ['POST', 'servicoController', 'store'],
       'edit' => ['GET', 'servicoController', 'edit'],
       'update' => ['POST', 'servicoController', 'update'],
-      'delete' => ['POST', 'servicoController', 'delete'],
+      'delete' => ['GET', 'servicoController', 'delete'],
+      'show' => ['POST', 'empresaController', 'show'],
     ],
     'iva' => [
       'index' => ['GET', 'ivaController', 'index'],
@@ -38,7 +40,8 @@ return [
       'store' => ['POST', 'ivaController', 'store'],
       'edit' => ['GET', 'ivaController', 'edit'],
       'update' => ['POST', 'ivaController', 'update'],
-      'delete' => ['POST', 'ivaController', 'delete'],
+      'delete' => ['GET', 'ivaController', 'delete'],
+      'show' => ['POST', 'empresaController', 'show'],
     ],
 ]
 ?>
