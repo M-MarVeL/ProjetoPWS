@@ -1,8 +1,8 @@
 <?php
 
 Class Empresa extends ActiveRecord\Model {
-  $table -> 'empresa';
-  $primary_key = 'id';
+    static $table_name = 'empresa';
+    static $primary_key = 'id';
 
   static $validates_presence_of = array(
     array('designacao', 'message' => 'não pode estar em branco!'),

@@ -2,6 +2,10 @@
 require_once './Controllers/authController.php';
 require_once './Controllers/FoController.php';
 require_once './Controllers/BoController.php';
+require_once './Controllers/servicoController.php';
+require_once './Controllers/empresaController.php';
+require_once './Controllers/ivaController.php';
+require_once './Controllers/utilizadoresController.php';
 
 return [
    'defaultRoute' => ['GET', 'FoController', 'index'],
@@ -42,6 +46,15 @@ return [
       'update' => ['POST', 'ivaController', 'update'],
       'delete' => ['GET', 'ivaController', 'delete'],
       'show' => ['POST', 'ivaController', 'show'],
+    ],
+    'utilizadores' => [
+      'index' => ['GET', 'utilizadoresController', 'index'],
+      'create' => ['GET', 'utilizadoresController', 'create'],
+      'store' => ['POST', 'utilizadoresController', 'store'],
+      'edit' => ['GET', 'utilizadoresController', 'edit'],
+      'update' => ['POST', 'utilizadoresController', 'update'],
+      'delete' => ['GET', 'utilizadoresController', 'delete'],
+      'show' => ['POST', 'utilizadoresController', 'show'],
     ],
 ]
 ?>
