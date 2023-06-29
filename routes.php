@@ -56,5 +56,14 @@ return [
       'delete' => ['GET', 'utilizadoresController', 'delete'],
       'show' => ['POST', 'utilizadoresController', 'show'],
     ],
+    'folha' => [
+      'index' => ['GET', 'folhaController', 'index'],
+      'create' => ['GET', 'folhaController', 'create'],
+      'store' => ['POST', 'folhaController', 'store'],
+      'edit' => ['GET', 'folhaController', 'edit'],
+      'update' => ['POST', 'folhaController', 'update'],
+      'delete' => ['GET', 'folhaController', 'delete'],
+      'show' => ['POST', 'folhaController', 'show'],
+    ],
 ]
 ?>

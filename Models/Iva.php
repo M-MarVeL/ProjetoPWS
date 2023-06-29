@@ -8,4 +8,10 @@ class Iva extends ActiveRecord\Model {
     array('servico')
   );
 
+    static $validates_presence_of = array(
+      array('percentagem', 'message' => 'Percentagem não pode ser vazio'),
+      array('descricao', 'message' => 'Descrição não pode ser vazio'),
+      array('emvigor', 'message' => 'Em vigor não pode ser vazio'),
+    );
+
 }

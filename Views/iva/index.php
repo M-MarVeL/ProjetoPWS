@@ -7,7 +7,7 @@
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">Inserir</button>
+                            <a href="index.php?c=iva&a=create" class="btn btn-success btn-lg">Inserir</a>
                         </div>
                         <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
@@ -24,68 +24,25 @@
                 <table class="table table-head-fixed text-nowrap">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>User</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Reason</th>
+                        <td>Percentagem</td>
+                        <td>Descrição</td>
+                        <td>Em Vigor</td>
+                        <td>Ações</td>
                     </tr>
                     </thead>
+                    <tbody>
+                    <?php foreach ($iva as $value) { ?>
                     <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                    </tr> <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                    </tr> <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                    </tr> <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                    </tr> <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                    </tr> <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
-                        <td><button>a</button></td>
+                      <td><?= $value->percentagem ?></td>
+                      <td><?= $value->descricao ?></td>
+                      <td><?= $value->emvigor ?></td>
+                      <td>
+                        <a href"index.php?c=iva&a=show&id=<?=$value->id?>" class="btn btn-info"><i class="fas fa-scroll"></i></a>
+                        <a href"index.php?c=iva&a=edit&id=<?=$value->id?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                        <a href"index.php?c=iva&a=delete&id=<?=$value->id?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </td>
                     </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

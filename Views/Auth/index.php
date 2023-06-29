@@ -6,7 +6,7 @@
       <a href="../../index2.html" class="h1"><b>Login</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Login to start your session</p>
+      <p class="login-box-msg">Login para acederes ao BackOffice</p>
 
       <form action="index.php?c=auth&a=login" method="post">
         <div class="input-group mb-3">
